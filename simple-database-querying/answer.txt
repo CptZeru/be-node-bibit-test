@@ -1,0 +1,7 @@
+SQL Query untuk mendapatkan data yang diminta:
+
+SELECT userTableL.ID, userTableL.UserName, userTableR.UserName as ParentUserName
+FROM `USER` userTableL
+LEFT JOIN `USER` userTableR
+ON userTableL.parent = userTableR.id
+ORDER BY userTableL.ID;
