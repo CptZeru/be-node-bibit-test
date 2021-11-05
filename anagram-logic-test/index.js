@@ -4,7 +4,7 @@ function findAndSortAnagrams(stringsArray) {
     // Loop through array of strings
     stringsArray.forEach(str => {
         // Sort string characters
-        const sortedStr = Array.from(str).sort().join('');
+        const sortedStr = sortString(str);
         // Initialize object property with empty array if have not exist
         if(!resultObj[sortedStr]) resultObj[sortedStr] = [];
         // Anagram grouping
@@ -14,6 +14,10 @@ function findAndSortAnagrams(stringsArray) {
     const convertedObjArray = [];
     Object.entries(resultObj).forEach(([key, value]) => convertedObjArray.push(value));
     return convertedObjArray;
+}
+
+function sortString(str) {
+    return Array.from(str).sort().join(''); // Converts string to array of chars, Sort chars, and Create string from sorted chars
 }
 
 const words = ["kita", "atik", "tika", "aku", "kia", "maka", "kua"];
