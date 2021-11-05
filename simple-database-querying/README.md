@@ -23,5 +23,5 @@ INSERT INTO `USER` (`ID`, `UserName`, `Parent`) VALUES
 3. Copy and paste SQL query from answer.txt.
 4. Run to check if the query is correct.
 
-You can also access the saved DB Fiddle with the same schema and query in [this link](https://www.db-fiddle.com/f/FDh23aaRWJzGtbgLfzBue/0).
+You can also access the saved DB Fiddle with the same schema and query in [this link](https://www.db-fiddle.com/f/FDh23aaRWJzGtbgLfzBue/1).
 
