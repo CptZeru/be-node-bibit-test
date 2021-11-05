@@ -11,15 +11,18 @@ function findAndSortAnagrams(stringsArray) {
         resultObj[sortedStr].push(str);
     });
     // Converts Object to Array and returns the Array of arrays.
-    const convertedObjArray = [];
-    Object.entries(resultObj).forEach(([key, value]) => convertedObjArray.push(value));
-    return convertedObjArray;
+    return objectToArray(resultObj);
 }
 
 function sortString(str) {
     return Array.from(str).sort().join(''); // Converts string to array of chars, Sort chars, and Create string from sorted chars
 }
 
+function objectToArray(obj) {
+    const convertedObjArray = [];
+    Object.entries(obj).forEach(([key, value]) => convertedObjArray.push(value));
+    return convertedObjArray;
+}
+
 const words = ["kita", "atik", "tika", "aku", "kia", "maka", "kua"];
-console.log(words);
 console.log(findAndSortAnagrams(words));
