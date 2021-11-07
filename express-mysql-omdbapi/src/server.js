@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require('dotenv').config()
-const db = require("../models")
+const db = require("./models")
 
 const app = express();
 db.sequelize.sync({ force: true }).then(() => {
@@ -24,6 +24,8 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/ping", (req, res) => {
   res.json({ message: "PONG!" });
 });
+
+require("./routes/omdb.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
